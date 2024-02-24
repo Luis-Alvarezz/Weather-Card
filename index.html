@@ -10,16 +10,55 @@
     
     <div class="backgroundCenter"> <!-- Para fondo de pantalla para medir 100% en Alto y ancho-->
         <div class="inputCity"> 
-            <input type="text" id="searchCity">
+            <input type="text" id="searchCity" placeholder="Ciudad a buscar">
             <button id="btnBuscar">Buscar</button>
         </div>
         <div class="cardWeather">
-            <img src="./assets/img/big_sun.svg" alt="" class="bigSun">
-            <img src="./assets/img/sun.svg" alt="" class="sun">
-            <span class="temperatura">30°</span>
-            <span class="localidad">Salamanca, Guanajuato</span>
+            <div class="cardImages">
+                <img src="./assets/img/big_sun.svg" alt="" class="bigSun">
+                <img src="./assets/img/sun.svg" alt="" class="sun">
+            </div>
+            <div class="text_decoration">
+                <span class="temperatura"></span>
+                <div class="localidad_decoration">
+                    <span class="localidad"> </span>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <div class="estadisticas sombra">
+            <table>
+                <thead> <!-- Encabezado-->
+                    <tr> <!-- Colocacion de 1 renglon o table-row-->
+                        <th>Clima</th>
+                        <th>Temperatura</th>
+                        <th>Sensacion Termica</th>
+                        <th>Vel. Viento</th>
+                        <th>Dir. Viento</th>
+                        <th>% Lluvia</th>
+                        <th>Tipo de Lluvia</th>
+                        <th>Ozono</th>
+                        <th>Humedad</th>
+                    </tr>
+                </thead>
+                <tbody id="bodyTable"></tbody> <!-- Aqui pegaremos la inf. con Js-->
+            </table>
+        </div>
+    </div> <!-- Fin de la tabla-->
+
+    <template id="renglonClima">
+        <tr>
+            <td>Sunny</td>  <!-- td= Es para la celda de la tabla-->
+            <td>9Grados</td>
+            <td>9.7Grados</td>
+            <td>3.4millas</td> <!-- Velocidad de viento-->
+            <td>SSE</td>    <!-- Direccion -->
+            <td>% lluvia</td> <!-- probabilidades de precipitacion-->
+            <td>Tipo lluvia</td>
+            <td>ozono</td>
+            <td>humedad</td>
+        </tr>
+    </template>
     <script src="./js/index.js"></script>
 </body>
 </html>

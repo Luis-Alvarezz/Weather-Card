@@ -1,12 +1,20 @@
+html {
+    font-size: 62.5%;
+}
 body {
     padding: 0;
     margin: 0;
+    font-size: 16px;
 }
 
 .backgroundCenter {
     width: 100vw;
     height: 100vh;
-    background-color: burlywood;
+    /* background-color: burlywood; */
+    /* background-color: #F0D651; */
+
+    /* background-color: rgba( 93 109 126 /50%); */
+    background-color: rgba( 255 201 92 /75%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,7 +27,24 @@ body {
     /* background-color: #00D2FF ;*/
     background: linear-gradient(#00D2FF, #3A7BD5);
     border-radius: 3px;
+    position: relative;
+}
+.text_decoration {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* margin-left: 2.5rem; */
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+}
 
+.cardImages {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
 }
 
 .bigSun {
@@ -29,5 +54,102 @@ body {
 
 .sun {
     position: relative;
-    left:180px;
+    left:175px;
+}
+
+/* Actividades para Jueves 15 de Febrero de 2023
+aparezca visibilidad
+despegar el input
+hacer bonito el boton de buscar
+cambiar la locacion de grados */
+
+/* Conjunto de input y boton de busqueda  */
+.inputCity { 
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Input */
+#searchCity {
+    color: #034B83  ;
+    background-color: #DED9C2;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bolder;
+    border-radius: 6px;
+    border: none;
+    width: 35.5rem;
+    text-align: center;
+}
+
+/* Button search */
+#btnBuscar{
+    background-color: #66bbea;
+    color: #052f50;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 1px 3px;
+    border-radius: 5px;
+    /* text-transform: uppercase; */
+    border: none;
+    text-align: center;
+}  
+#btnBuscar:hover {
+    cursor: pointer;
+}
+
+.temperatura {
+    font-size: 5.5rem;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.localidad {
+    color: white;
+    /* text-align: center; */
+    padding-bottom : 5rem;
+
+}
+.localidad_decoration {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+/**  Tabla de temperatura **/
+.sombra {
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: blue;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.estadisticas {
+    background-color: #F9E046;
+    display: flex;
+    margin: 1rem;
+    border: solid .5rem rgba( 236, 126, 16, 90);
+}
+
+thead{
+    background-color: rgba(249, 154, 70, 0.4);
+}
+
+th {
+    padding: 1rem;
+    text-transform: uppercase;
+}
+th:hover {
+    background-color: rgba(228, 107, 0, 0.4);
+}
+
+td {
+    padding: 6px;
+    border-bottom: solid 1px #4D5568;
+    text-align: center;
+}
+td:hover {
+    background-color: rgba(185, 159, 8, 0.4);
 }
